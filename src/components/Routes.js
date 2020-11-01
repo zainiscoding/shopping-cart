@@ -40,7 +40,6 @@ const Routes = () => {
         item.totalPrice = itemPrice * item.count;
       }
     });
-
     setCart(newCartNumbersState);
 
     //Add the names of current cart items to an array
@@ -50,7 +49,6 @@ const Routes = () => {
     if (!cartItemNames.includes(newCartItem.name)) {
       setCart([...cart, newCartItem]);
     }
-
     setCartSize(cartSize + newCartItem.count);
     setCartPrice(cartPrice + itemPrice * itemCount);
   }
