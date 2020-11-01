@@ -82,7 +82,7 @@ const Routes = () => {
     <BrowserRouter>
       <Navbar cartSize={cartSize} />
       <Switch>
-        <Route exact path='/' component={HomePage}></Route>
+        <Route exact path='/shopping-cart' component={HomePage}></Route>
         <Route
           exact
           path='/shop'
