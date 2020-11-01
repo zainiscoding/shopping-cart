@@ -69,6 +69,7 @@ const Routes = () => {
     const splicedItem = cartToSplice.splice(targetId, 1);
     setCart(cart.filter((obj) => cart.indexOf(obj) !== targetId));
     setCartSize(cartSize - splicedItem[0].count);
+    setCartPrice(cartPrice - splicedItem[0].price);
   }
 
   function checkForNegative(e) {
