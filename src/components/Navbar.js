@@ -7,7 +7,7 @@ const Navbar = (props) => {
       <Link
         className='navbar__link'
         onMouseEnter={(e) => (e.target.className = 'navbar__link--color')}
-        to='/'
+        to='/shopping-cart'
       >
         Home
       </Link>
