@@ -32,25 +32,6 @@ const Routes = () => {
       totalPrice: totalItemPrice,
     };
 
-    // Update the cart item count and total price
-    const newCartNumbersState = [...cart];
-    newCartNumbersState.forEach((item) => {
-      if (item.name === newCartItem.name) {
-        item.count += itemCount;
-        item.totalPrice = itemPrice * item.count;
-      }
-    });
-
-    // let newCartNumbersState = cart.map((item) => {
-    //   if (item.name === newCartItem.name) {
-    //     item.count += itemCount;
-    //     item.totalPrice = itemPrice * item.count;
-    //     return newCartItem;
-    //   }
-    // });
-
-    setCart(newCartNumbersState);
-
     //Add the names of current cart items to an array
     setCartItemNames([...cartItemNames, newCartItem.name]);
 
@@ -58,7 +39,6 @@ const Routes = () => {
     if (!cartItemNames.includes(newCartItem.name)) {
       setCart([...cart, newCartItem]);
     }
-
     setCartSize(cartSize + newCartItem.count);
     setCartPrice(cartPrice + itemPrice * itemCount);
   }
