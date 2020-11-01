@@ -14,14 +14,14 @@ const Navbar = (props) => {
       <Link
         className='navbar__link'
         onMouseEnter={(e) => (e.target.className = 'navbar__link--color')}
-        to='/shop'
+        to='/shopping-cart/shop'
       >
         Shop
       </Link>
       <Link
         className='navbar__link'
         onMouseEnter={(e) => (e.target.className = 'navbar__link--color')}
-        to='/cart'
+        to='/shopping-cart/cart'
       >
         View Cart ({props.cartSize})
       </Link>

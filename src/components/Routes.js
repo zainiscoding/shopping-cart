@@ -85,7 +85,7 @@ const Routes = () => {
         <Route exact path='/shopping-cart' component={HomePage}></Route>
         <Route
           exact
-          path='/shop'
+          path='/shopping-cart/shop'
           render={(props) => (
             <Shop
               {...props}
@@ -98,7 +98,7 @@ const Routes = () => {
         ></Route>
         <Route
           exact
-          path='/cart'
+          path='/shopping-cart/cart'
           render={(props) => (
             <Cart
               {...props}
