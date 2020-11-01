@@ -36,7 +36,7 @@ const Routes = () => {
     const newCartNumbersState = [...cart];
     newCartNumbersState.forEach((item) => {
       if (item.name === newCartItem.name) {
-        item.count += itemCount;
+        item.count = itemCount;
         item.totalPrice = itemPrice * item.count;
       }
     });
