@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.737f4b05.chunk.css",
+    "main.js": "/shopping-cart/static/js/main.8f7be022.chunk.js",
+    "main.js.map": "/shopping-cart/static/js/main.8f7be022.chunk.js.map",
+    "runtime-main.js": "/shopping-cart/static/js/runtime-main.2c057c56.js",
+    "runtime-main.js.map": "/shopping-cart/static/js/runtime-main.2c057c56.js.map",
+    "static/js/2.f6843b73.chunk.js": "/shopping-cart/static/js/2.f6843b73.chunk.js",
+    "static/js/2.f6843b73.chunk.js.map": "/shopping-cart/static/js/2.f6843b73.chunk.js.map",
+    "index.html": "/shopping-cart/index.html",
+    "static/css/main.737f4b05.chunk.css.map": "/shopping-cart/static/css/main.737f4b05.chunk.css.map",
+    "static/js/2.f6843b73.chunk.js.LICENSE.txt": "/shopping-cart/static/js/2.f6843b73.chunk.js.LICENSE.txt",
+    "static/media/adoboloco-fiya-fiya.370b6365.jpg": "/shopping-cart/static/media/adoboloco-fiya-fiya.370b6365.jpg",
+    "static/media/adoboloco-hamajang.dbd6455f.jpg": "/shopping-cart/static/media/adoboloco-hamajang.dbd6455f.jpg",
+    "static/media/adoboloco-kolohe-kid.6fd3a388.jpg": "/shopping-cart/static/media/adoboloco-kolohe-kid.6fd3a388.jpg",
+    "static/media/adoboloco-maui-no-ka-oi.06fcc004.jpg": "/shopping-cart/static/media/adoboloco-maui-no-ka-oi.06fcc004.jpg",
+    "static/media/anejo-pepper-sauce-red.58b60b9f.jpg": "/shopping-cart/static/media/anejo-pepper-sauce-red.58b60b9f.jpg",
+    "static/media/anejo-pepper-sauce-verde.58b13549.jpg": "/shopping-cart/static/media/anejo-pepper-sauce-verde.58b13549.jpg",
+    "static/media/angry-goat-goat-rider.453a93ce.jpg": "/shopping-cart/static/media/angry-goat-goat-rider.453a93ce.jpg",
+    "static/media/angry-goat-hippy-dippy-green.06b92fd9.jpg": "/shopping-cart/static/media/angry-goat-hippy-dippy-green.06b92fd9.jpg",
+    "static/media/black-garlic-reaper.1dab5bd8.jpg": "/shopping-cart/static/media/black-garlic-reaper.1dab5bd8.jpg",
+    "static/media/bravado-aka-miso.3c2a9f7d.jpg": "/shopping-cart/static/media/bravado-aka-miso.3c2a9f7d.jpg",
+    "static/media/bravado-ghost-pepper-blueberry.8c7b0020.jpg": "/shopping-cart/static/media/bravado-ghost-pepper-blueberry.8c7b0020.jpg",
+    "static/media/bravado-pineapple-habanero.4902eb57.jpg": "/shopping-cart/static/media/bravado-pineapple-habanero.4902eb57.jpg",
+    "static/media/brooklyn-grange-green.e3901e91.jpg": "/shopping-cart/static/media/brooklyn-grange-green.e3901e91.jpg",
+    "static/media/brooklyn-grange-red.bf7bde4d.jpg": "/shopping-cart/static/media/brooklyn-grange-red.bf7bde4d.jpg",
+    "static/media/burns-mccoy-exhorresco.76e31be7.jpg": "/shopping-cart/static/media/burns-mccoy-exhorresco.76e31be7.jpg",
+    "static/media/butterfly-bakery-violet-clair-hell-yeah-i’m-hot-sauce.271fcac8.jpg": "/shopping-cart/static/media/butterfly-bakery-violet-clair-hell-yeah-i’m-hot-sauce.271fcac8.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2c057c56.js",
+    "static/js/2.f6843b73.chunk.js",
+    "static/css/main.737f4b05.chunk.css",
+    "static/js/main.8f7be022.chunk.js"
+  ]
+}
