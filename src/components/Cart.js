@@ -1,4 +1,5 @@
 import React from 'react';
+var uniqid = require('uniqid');
 
 const Cart = (props) => {
   return (
@@ -14,23 +15,37 @@ const Cart = (props) => {
           <>
             {props.cart.map((item, index) => {
               return (
-                <div className='cart-item'>
-                  <p>
-                    {item.name} x {item.count}
-                  </p>{' '}
-                  <p>Price: ${item.price}</p>
-                  {item.count > 1 && <p>Total: ${item.totalPrice}</p>}
+                <div key={uniqid()} className='cart-item'>
                   <input
                     type='button'
                     value='X'
+                    className='cart-item__delete-button '
                     id={index}
                     onClick={props.removeStateItem}
+                    onMouseEnter={(e) =>
+                      (e.target.className = 'cart-item__delete-button--color')
+                    }
                   ></input>
+                  <p className='cart-item__name'>
+                    {item.name} x {item.count}
+                  </p>{' '}
+                  <p className='cart-item__price'>Price: ${item.price}</p>
+                  {item.count > 1 && <p>Total: ${item.totalPrice}</p>}
                 </div>
               );
             })}
             <div id='total-price-wrapper'>
               <p>Cart Total: ${props.cartPrice}</p>
+            </div>
+            <div id='checkout-button-wrapper'>
+              <input
+                className='shop-item__item-button'
+                value='Checkout'
+                type='button'
+                onMouseEnter={(e) =>
+                  (e.target.className = 'shop-item__item-button--color')
+                }
+              ></input>
             </div>
           </>
         )}

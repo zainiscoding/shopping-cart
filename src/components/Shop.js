@@ -6,9 +6,9 @@ const Shop = (props) => {
     <div id='shop'>
       <h1 className='page-heading'>Shop</h1>
       <div id='shop__shop-items'>
-        {Images.map((item) => {
+        {Images.map((item, index) => {
           return (
-            <div className='shop-items__shop-item'>
+            <div key={index} className='shop-items__shop-item'>
               <img
                 src={item.image}
                 alt={item.name}

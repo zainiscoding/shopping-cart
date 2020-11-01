@@ -65,8 +65,10 @@ const Routes = () => {
 
   function removeStateItem(e) {
     const targetId = parseInt(e.target.id);
-
+    const cartToSplice = [...cart];
+    const splicedItem = cartToSplice.splice(targetId, 1);
     setCart(cart.filter((obj) => cart.indexOf(obj) !== targetId));
+    setCartSize(cartSize - splicedItem[0].count);
   }
 
   function checkForNegative(e) {
