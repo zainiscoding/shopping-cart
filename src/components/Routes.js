@@ -32,31 +32,6 @@ const Routes = () => {
       totalPrice: totalItemPrice,
     };
 
-    // Update the cart item count and total price
-    // const newCartNumbersState = [...cart];
-    // newCartNumbersState.forEach((item) => {
-    //   if (item.name === newCartItem.name) {
-    //     item.count += itemCount;
-    //     item.totalPrice = itemPrice * item.count;
-    //   }
-    // });
-    // setCart(newCartNumbersState);
-
-    // setCart((previousState) => {
-    //   console.log(previousState);
-    //   if (previousState.count === itemCount) {
-    //     console.log('count ===');
-    //     return;
-    //   } else if (previousState.includes(newCartItem)) {
-    //     console.log('includes');
-    //     setCartSize(cartSize + itemCount + previousState.count);
-    //     previousState.count = itemCount;
-    //     previousState.totalPrice = itemPrice * itemCount;
-    //     setCartPrice(cartPrice + itemPrice * itemCount);
-    //     return previousState;
-    //   } else return;
-    // });
-
     //Add the names of current cart items to an array
     setCartItemNames([...cartItemNames, newCartItem.name]);
 
@@ -75,11 +50,14 @@ const Routes = () => {
           ) {
             prevState.splice(prevState.indexOf(item), 1);
             prevState.push(newCartItem);
+
             setCartSize(cartSize + itemCount - item.count);
+
             newCartItem.count = itemCount;
             const newPrice = newCartItem.count * newCartItem.price;
             setCartPrice(cartPrice - item.totalPrice + newPrice);
             item.totalPrice = newPrice;
+
             return [...prevState, newCartItem];
           }
         });
