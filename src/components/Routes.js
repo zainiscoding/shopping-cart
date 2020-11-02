@@ -33,14 +33,29 @@ const Routes = () => {
     };
 
     // Update the cart item count and total price
-    const newCartNumbersState = [...cart];
-    newCartNumbersState.forEach((item) => {
-      if (item.name === newCartItem.name) {
-        item.count += itemCount;
-        item.totalPrice = itemPrice * item.count;
-      }
-    });
-    setCart(newCartNumbersState);
+    // const newCartNumbersState = [...cart];
+    // newCartNumbersState.forEach((item) => {
+    //   if (item.name === newCartItem.name) {
+    //     item.count += itemCount;
+    //     item.totalPrice = itemPrice * item.count;
+    //   }
+    // });
+    // setCart(newCartNumbersState);
+
+    // setCart((previousState) => {
+    //   console.log(previousState);
+    //   if (previousState.count === itemCount) {
+    //     console.log('count ===');
+    //     return;
+    //   } else if (previousState.includes(newCartItem)) {
+    //     console.log('includes');
+    //     setCartSize(cartSize + itemCount + previousState.count);
+    //     previousState.count = itemCount;
+    //     previousState.totalPrice = itemPrice * itemCount;
+    //     setCartPrice(cartPrice + itemPrice * itemCount);
+    //     return previousState;
+    //   } else return;
+    // });
 
     //Add the names of current cart items to an array
     setCartItemNames([...cartItemNames, newCartItem.name]);
@@ -48,9 +63,23 @@ const Routes = () => {
     //Then if the cart doesn't include anything with the names from the above array, update the cart with the new item
     if (!cartItemNames.includes(newCartItem.name)) {
       setCart([...cart, newCartItem]);
+      setCartSize(cartSize + newCartItem.count);
+      setCartPrice(cartPrice + itemPrice * itemCount);
+    } else {
+      return setCart((prevState) => {
+        prevState.forEach((item) => {
+          if (item.count !== itemCount) {
+            setCartSize(cartSize + itemCount - item.count);
+            item.count = itemCount;
+            const newPrice = item.count * item.price;
+            setCartPrice(cartPrice - item.totalPrice + newPrice);
+            item.totalPrice = newPrice;
+            return [...cart];
+          }
+        });
+        return [...cart];
+      });
     }
-    setCartSize(cartSize + newCartItem.count);
-    setCartPrice(cartPrice + itemPrice * itemCount);
   }
 
   function removeStateItem(e) {
