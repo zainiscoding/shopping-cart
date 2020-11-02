@@ -66,18 +66,24 @@ const Routes = () => {
       setCartSize(cartSize + newCartItem.count);
       setCartPrice(cartPrice + itemPrice * itemCount);
     } else {
+      //Prevents the 'Add to cart' button from adding further copies of an item when the count hasn't changed
       return setCart((prevState) => {
         prevState.forEach((item) => {
-          if (item.count !== itemCount) {
+          if (
+            item.name === newCartItem.name &&
+            item.count !== newCartItem.count
+          ) {
+            prevState.splice(prevState.indexOf(item), 1);
+            prevState.push(newCartItem);
             setCartSize(cartSize + itemCount - item.count);
-            item.count = itemCount;
-            const newPrice = item.count * item.price;
+            newCartItem.count = itemCount;
+            const newPrice = newCartItem.count * newCartItem.price;
             setCartPrice(cartPrice - item.totalPrice + newPrice);
             item.totalPrice = newPrice;
-            return [...cart];
+            return [...prevState, newCartItem];
           }
         });
-        return [...cart];
+        return [...prevState];
       });
     }
   }
